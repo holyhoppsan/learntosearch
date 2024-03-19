@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # Download conda
 # mkdir -p ~/miniconda3
@@ -6,13 +6,16 @@
 # bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 # rm -rf ~/miniconda3/miniconda.sh
 
-echo "Initialize shell"
-# Initialize conda in bash
-~/miniconda3/bin/conda init bash
+# echo "Initialize shell"
+# # Initialize conda in bash
+# ~/miniconda3/bin/conda init bash
+
+conda init zsh
 
 # Init environment
 conda create --name learntosearch python=3.11
 
+echo "### Running conda activate"
 conda activate learntosearch
 
 echo "Python version installed:"
